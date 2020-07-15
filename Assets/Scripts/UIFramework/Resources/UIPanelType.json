@@ -1,0 +1,36 @@
+{
+  "infoList": [
+    {
+      "panelTypeString": "LoginPanel",
+      "path": "UIPanel/GameLogin/LoginPanel"
+    },
+    {
+      "panelTypeString": "RegisterPanel",
+      "path": "UIPanel/GameLogin/RegisterPanel"
+    },
+    {
+      "panelTypeString": "MainPanel",
+      "path": "UIPanel/Main/MainPanel"
+    },
+    {
+      "panelTypeString": "CreateGamePanel",
+      "path": "UIPanel/Main/CreateGamePanel"
+    },
+    {
+      "panelTypeString": "SearchGamePanel",
+      "path": "UIPanel/Main/SearchGamePanel"
+    },
+    {
+      "panelTypeString": "SettingsPanel",
+      "path": "UIPanel/Main/SettingsPanel"
+    },
+    {
+      "panelTypeString": "GamingPanel",
+      "path": "UIPanel/GameScene1/GamingPanel"
+    },
+    {
+      "panelTypeString": "InfoPanel",
+      "path": "UIPanel/GameScene1/InfoPanel"
+    }
+  ]
+}
