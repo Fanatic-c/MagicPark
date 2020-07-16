@@ -15,6 +15,7 @@ namespace NetworkFramework
         private SyncPosRequest _syncPosRequest;
         private SyncPlayerRequest _syncPlayerRequest;
         private Vector3 lastPosition = Vector3.zero;
+        private Vector3 lastEulerAngles = Vector3.zero;
         private float moveOffset = 0f;
         public GameObject playerPrefab;
         public GameObject player;
@@ -39,7 +40,9 @@ namespace NetworkFramework
             if (Vector3.Distance(transform.position, lastPosition) > moveOffset)
             {
                 lastPosition = player.transform.position;
+                lastEulerAngles = player.transform.eulerAngles;
                 _syncPosRequest.position = player.transform.position;
+                _syncPosRequest.eulerAngles = player.transform.eulerAngles;
                 _syncPosRequest.DefaultRequest();
             }
         }
@@ -68,6 +71,7 @@ namespace NetworkFramework
                     GameObject player = DictUtil.GetValue(playerDict, data.Username);
                     Debug.Log(data.Username);
                     player.transform.position = new Vector3((float)data.Pos.X, (float)data.Pos.Y, (float)data.Pos.Z);
+                    player.transform.eulerAngles = new Vector3((float)data.Angle.X, (float)data.Angle.Y, (float)data.Angle.Z);
                 }
             }
         }
